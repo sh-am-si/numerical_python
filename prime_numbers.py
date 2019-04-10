@@ -2,13 +2,14 @@
 
 '''
 import datetime
+import numpy as np
 
 counter = 1
 num = 10000
 
 t1 = datetime.datetime.now()
 for i in range(3, num, 2):
-    for j in range(3, i // 2, 2):
+    for j in range(3, round(np.sqrt(i)), 2):
         if i % j == 0:
             break
     else:
