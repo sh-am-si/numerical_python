@@ -27,7 +27,6 @@ if __name__ == '__main__':
     print(type(G))
     colors = np.array(['b', 'g', 'r', 'c', 'm', 'y'], dtype=np.object)
     color_index = np.arange(len(G)) % len(colors)
-    color_index = None
     nx.draw(G, node_color=colors[color_index], with_labels=True)
     print('Edges:', G.edges)
     print('Nodes:', G.nodes)
