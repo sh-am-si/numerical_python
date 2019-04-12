@@ -1,5 +1,5 @@
 '''
-:author: Włodek
+:author: Volodya
 :created: 16/12/2019
 Introduction to Python
 Lecture 3, Functions and comprehensions
