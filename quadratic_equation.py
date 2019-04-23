@@ -22,9 +22,9 @@ def quadratic_formula(a=1, b=2, c=-3):
     :return:  x1,x2 : a*x_i^2 + b*x_i + c = 0 for i=1,2
     """
 
-    assert isinstance(a, numbers.Number), 'type of the parameter a is not numerical but {}'.format(type(a))
-    assert isinstance(b, numbers.Number), 'type of the parameter b is not numerical but {}'.format(type(b))
-    assert isinstance(c, numbers.Number), 'type of the parameter c is not numerical but {}'.format(type(c))
+    assert isinstance(a, numbers.Number), 'parameter a type is not numerical but {}'.format(type(a))
+    assert isinstance(b, numbers.Number), 'parameter b type is not numerical but {}'.format(type(b))
+    assert isinstance(c, numbers.Number), 'parameter c type is not numerical but {}'.format(type(c))
 
     D = b ** 2 - 4 * a * c
     if D >= 0:
