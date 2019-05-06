@@ -17,4 +17,4 @@ So  long  lives  this, and this  gives  life to thee.
 
 import re
 
-# reformat text that only one whitespace stay between the words
+# reformat the text that only one whitespace stay between the words
