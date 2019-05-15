@@ -1,6 +1,6 @@
 '''
-Introduction to Python
-Lecture 3: Functions iand Comprehensions
+Introduction to Numerical Python
+Functions and Comprehensions
 
 Recursive functions
 '''
