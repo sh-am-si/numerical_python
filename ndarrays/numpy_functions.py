@@ -34,7 +34,7 @@ def test3(ar):
 
 def test4(ar):
     # has even number of even elements
-    # e.g [0, 1, 2, 35, 47] has 2 even none-zero elements
+    # e.g [0, 1, 2, 35, 46] has 2 even none-zero elements
     # should be 0, 2, 3, 6, 7, 10, 11, 12, 14, 16, 17, 18, 19
     pass
 
@@ -47,14 +47,14 @@ def test5(ar):
 
 
 def test6(ar):
-    # has descending elements
+    # is as ascending sequence of elements
     # e.g [-12, -1, 0, 1, 3]
     # should be 17
     pass
 
 
 def test7(ar):
-    # has ascending elements
+    # is a descending sequence of elements
     # e.g [12, 1, 0, -1, -3]
     # should be 12
     pass
