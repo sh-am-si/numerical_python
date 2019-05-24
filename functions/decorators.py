@@ -5,14 +5,15 @@ import datetime
 
 
 def time_it(func):
-    t1 = datetime.datetime.now()
 
     def func_wrapper(*args, **kwargs):
-        return func(*args, **kwargs)
+        t1 = datetime.datetime.now()
+        result = func(*args, **kwargs)
+        t2 = datetime.datetime.now()
+        print((t2 - t1).microseconds, 'ms')
 
-    t2 = datetime.datetime.now()
+        return result
 
-    print((t2 - t1).microseconds, 'ms')
     return func_wrapper
 
 
@@ -25,28 +26,32 @@ if __name__ == '__main__':
     array = [random.random() for i in range(N)]
     np_array = np.array(array)
 
+    @time_it
+    def python_sum(ar):
+        return sum(ar)
+
 
     @time_it
-    def python_max(ar):
-        return max(ar)
+    def numpy_sum(ar):
+        return np.sum(ar)
 
-
-    @time_it
-    def numpy_max(ar):
-        return np.max(ar)
-
-
-    print(python_max(array))
-    print(numpy_max(np_array))
+    print('Python sum', python_sum(array))
+    print('Numpy sum', numpy_sum(np_array))
 
     # exactly the same code
     print('and once again')
 
-    python_max = time_it(python_max)
-    numpy_max = time_it(numpy_max)
+    def python_sum2(ar):
+        return sum(ar)
 
-    print(python_max(array))
-    print(numpy_max(np_array))
+    def numpy_sum2(ar):
+        return np.sum(ar)
+
+    python_sum3 = time_it(python_sum2)
+    numpy_sum3 = time_it(numpy_sum2)
+
+    print('Python sum', python_sum3(array))
+    print('Numpy sum', numpy_sum3(np_array))
 
 
 

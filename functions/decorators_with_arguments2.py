@@ -6,16 +6,15 @@ import datetime
 
 def time_it(repeats=100):
     def inner_function(func):
-        t1 = datetime.datetime.now()
 
         def func_wrapper(*args, **kwargs):
+            t1 = datetime.datetime.now()
             for i in range(repeats-1):
-                func(*args, **kwargs)
-            return func(*args, **kwargs)
+                result = func(*args, **kwargs)
+            t2 = datetime.datetime.now()
+            print(f'Execution time of {repeats} repeats is', (t2 - t1).microseconds, 'ms')
+            return result
 
-        t2 = datetime.datetime.now()
-
-        print(f'Execution time of {repeats} repeats', (t2 - t1).microseconds, 'ms')
         return func_wrapper
     return inner_function
 
