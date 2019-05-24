@@ -24,9 +24,11 @@ def create_random_graph(nodes=30, delta=0.02):
 
 def get_cc_num(graph):
     '''
-    algorithm suggested by Sebastian and Grzegorz
-    :param graph:
-    :return:
+    algorithm suggested by both Sebastian and Grzegorz
+    actually it is really cool
+
+    :param graph: networkX graph
+    :return:      number of connected components
     '''
     cc = np.arange(len(graph))
     for edge in graph.edges:
