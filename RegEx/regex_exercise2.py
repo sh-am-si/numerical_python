@@ -33,4 +33,10 @@ print(dictionary)
 print(len(dictionary))
 
 for word in dictionary:
-    pass
+    if re.search(r'(.)\1\w\1\1', word):
+        print('task4: ', word)
+
+    if re.search(r'^(\w+)\1$', word):
+        print('task5: ', word)
+
+
