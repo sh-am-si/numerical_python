@@ -40,13 +40,7 @@ class Polynomial:
         :return: value polynomial
         '''
 
-        if isinstance(t, numbers.Number):
-            val = self.__coef[0]
-            for ind in range(1, len(self.__coef)):
-                val *= t
-                val += self.__coef[ind]
-
-        return val
+        pass
 
     def __getitem__(self, item):
         '''
