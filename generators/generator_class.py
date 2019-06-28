@@ -1,6 +1,6 @@
 
 
-from lecture4.generator_prime_number import is_prime
+from generators.generator_prime_number import is_prime
 
 
 class PrimeGenerator:
